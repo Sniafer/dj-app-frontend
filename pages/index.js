@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Layout from "@/components/Layout";
-import { API_URL } from "@/config/index";
 import EventItem from "@/components/EventItem";
+import { API_URL } from "@/config/index";
 
-export default function Home({ events }) {
+export default function HomePage({ events }) {
   return (
     <Layout>
       <h1>Upcoming Events</h1>
@@ -15,7 +15,7 @@ export default function Home({ events }) {
 
       {events.length > 0 && (
         <Link href="/events">
-          <a className="btn-secondary"> View All Events</a>
+          <a className="btn-secondary">View All Events</a>
         </Link>
       )}
     </Layout>
